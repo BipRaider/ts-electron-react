@@ -1,0 +1,10 @@
+@use '../../../../sass/styles' as *;
+
+.sinUp {
+  min-width: calc(100% - 150px);
+  margin-top: 2rem;
+  background: $blue !important;
+  div[class='ant-drawer-content'] {
+    background: $blue;
+  }
+}

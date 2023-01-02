@@ -1,0 +1,29 @@
+@use '../../sass/styles' as *;
+
+.admin {
+  @extend %flex;
+  @extend %flex-direction-column;
+  @extend %justify-content-start;
+  @extend %align-items-center;
+  @include flex();
+  @include border-radius(10px, 10px, 10px, 10px);
+  height: 100%;
+  margin: 10px;
+  padding: 1rem 2%;
+  background-color: $section-color;
+
+  .wrap {
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.draw {
+  height: 100%;
+  margin-top: 2rem;
+  background: $blue !important;
+  div[class='ant-drawer-content'] {
+    background: $blue;
+  }
+}

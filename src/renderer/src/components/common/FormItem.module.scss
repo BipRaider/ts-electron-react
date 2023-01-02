@@ -1,0 +1,5 @@
+@use '../../sass/styles' as *;
+
+.input {
+  @extend %input-1;
+}

@@ -1,0 +1,41 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "useDefineForClassFields": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitAny": false,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "types": [
+      "node",
+      "electron",
+      "vite/client"
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.d.ts",
+    "src/**/*",
+  ],
+  "references": [
+    {
+      "path": "../../tsconfig.node.json"
+    }
+  ]
+}

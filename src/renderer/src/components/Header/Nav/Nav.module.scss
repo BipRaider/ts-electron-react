@@ -1,0 +1,44 @@
+@use '../../../sass/styles' as *;
+
+.nav {
+  @extend %flex;
+  @extend %flex-nowrap;
+  @extend %flex-direction-column;
+  @extend %justify-content-between;
+  @extend %align-items-center;
+  position: relative;
+
+  padding: 2rem 0;
+}
+.activated {
+  @include UkrainianFlag();
+}
+
+.list {
+  @extend %flex;
+  @extend %flex-nowrap;
+  @extend %flex-direction-column;
+  @extend %justify-content-between;
+  @extend %align-items-center;
+  margin: 0;
+  width: 100%;
+}
+
+.item {
+  @extend %flex;
+  @extend %flex-nowrap;
+  @extend %flex-direction-row;
+  @extend %justify-content-center;
+  @extend %align-items-center;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  a {
+    position: relative;
+
+    line-height: 1.5;
+    @extend %nav-bar-link;
+    @extend %no-copy-text;
+    @include transitions($hover_line);
+    @extend %nav-style;
+  }
+}

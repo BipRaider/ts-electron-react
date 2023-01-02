@@ -1,0 +1,47 @@
+@use '../../sass/styles' as *;
+
+.home {
+  @extend %flex;
+  @extend %flex-direction-column;
+  @extend %justify-content-start;
+  @extend %align-items-center;
+  @include flex();
+  @include border-radius(10px, 10px, 10px, 10px);
+  width: calc(100% - 150px);
+  margin: 10px;
+  height: 100%;
+  padding: 1rem 2%;
+  background-color: $section-color;
+  .wrap {
+    background: transparent;
+    z-index: 3;
+    @extend %no-copy-text;
+    margin-top: 5%;
+  }
+  .title {
+    @extend %h1-text;
+  }
+  .name {
+    @extend %h2-text;
+  }
+  .hello {
+    @extend %p-text;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .auth {
+    @extend %flex;
+    @extend %flex-direction-row;
+    @extend %justify-content-center;
+    @extend %align-items-center;
+
+    .text {
+      @extend %p-text-1;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

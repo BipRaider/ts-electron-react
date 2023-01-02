@@ -1,0 +1,49 @@
+/* Colors base*/
+$navy: rgb(53, 87, 100);
+$teal: rgb(90, 143, 123);
+$blue: rgb(129, 202, 207);
+$yellow: rgb(255, 234, 17);
+$winter: rgb(238, 238, 238);
+$dark: rgb(0, 0, 0);
+$blue-2: rgb(0, 0, 255);
+$blue-3: rgb(0, 21, 41);
+/*Ukrainian flag*/
+$flag-1: rgb(255, 217, 0);
+$flag-2: rgb(24, 144, 255);
+$flag-1-1: rgba(255, 217, 0, 0.3);
+$flag-2-1: rgba(24, 144, 255, 0.3);
+
+//@extend %flag-bag;
+%flag-bag {
+  background: linear-gradient(100deg, $flag-1-1, $flag-2-1);
+}
+
+//@extend %flag-bag-1;
+%flag-bag-1 {
+  background: linear-gradient(to top, $flag-1, $flag-2);
+}
+/* Link */
+$link-1: $flag-1;
+$link-2: $flag-2;
+$link-3: $blue-2;
+
+/* TEXT */
+$text-color-1: $teal;
+$text-color-2: $dark;
+$text-color-3: $winter;
+$text-color-4: $yellow;
+$text-color-5: $navy;
+
+$title-color-1: rgba(90, 143, 123, 0.3);
+/* h1-h5*/
+$title-color: $navy;
+$p-color: $teal;
+/* Button  */
+$button-1-color: $flag-1;
+$button-2-color: $flag-2;
+
+/* Components */
+$header-color: $navy;
+$main-color: $winter;
+$footer-color: $navy;
+$section-color: $blue;

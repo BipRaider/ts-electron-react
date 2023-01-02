@@ -1,0 +1,10 @@
+@use '../../../sass/styles' as *;
+
+.card {
+  @extend %flex;
+  @include flex();
+  @extend %align-items-start;
+  @extend %flex-direction-column;
+  @include border-radius(10px, 10px, 10px, 10px);
+  @extend %CardDef;
+}

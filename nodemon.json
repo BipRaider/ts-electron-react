@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "ignore": ["./src/**/*spec.ts", ".git"],
+  "watch": ["./src", "./scripts/**/*.ts"],
+  "exc": "ts,js,css,html,ejs,jsx,tsx",
+  "restartable": "rs",
+  "execMap": {
+    "ts": "node --inspect=0.0.0.0:9229 --nolazy -r ts-node/register"
+  },
+  "exec": "ts-node --files ./scripts/dev-server.ts"
+}

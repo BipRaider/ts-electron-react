@@ -1,0 +1,29 @@
+@use '../../../sass/styles' as *;
+
+.card {
+  @extend %flex;
+  @include flex();
+  @extend %flex-direction-column;
+  @extend %align-items-start;
+  @extend %CardDef;
+
+  .list {
+    @extend %flex;
+    @extend %flex-direction-column;
+    @extend %justify-content-start;
+    @extend %align-items-start;
+    max-width: 300px;
+    .item {
+      @extend %flex;
+      @extend %flex-direction-row;
+      @extend %justify-content-start;
+      @extend %align-items-start;
+      margin: 1px 0;
+      .tag {
+        background-color: transparent;
+        min-width: 100px;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@use '../../../sass/styles' as *;
+
+.card {
+  @extend %flex;
+  @include flex();
+  @extend %flex-direction-column;
+  @extend %align-items-start;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  .list {
+    @extend %flex;
+    @extend %justify-content-start;
+    @extend %align-items-start;
+    @extend %flex-nowrap;
+    .item {
+      @extend %flex;
+      @extend %flex-direction-row;
+      @extend %justify-content-start;
+      @extend %align-items-start;
+
+      margin: 1px;
+      .tag {
+        min-width: 100px;
+        background-color: transparent;
+        .link {
+          @extend %flex;
+          @extend %flex-direction-row;
+          @extend %justify-content-between;
+          @extend %align-items-center;
+
+          margin: 0;
+          a {
+            width: 100%;
+            margin-right: 5%;
+            @extend %link-text-2;
+            font-weight: 600;
+            color: $flag-1;
+            text-shadow: 1px 1px 1px $blue-3;
+            @include transitions($hover_line);
+          }
+          a:hover {
+            color: $link-3;
+            text-shadow: 1px 1px 1px $flag-1;
+            @include transitions($hover_line);
+          }
+          .icon {
+            color: $link-1;
+            margin-left: 5px;
+            @include transitions($hover_line);
+            &:hover {
+              @include transitions($hover_line);
+              color: $link-3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "WebWorker",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitAny": false,
+    "jsx": "react-jsx",
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.scss",
+    "assets",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.(test|spec).(ts|tsx)"
+  ],
+  "references": [
+    {
+      "path": "../../tsconfig.node.json"
+    }
+  ]
+}

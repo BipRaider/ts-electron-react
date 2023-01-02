@@ -1,0 +1,39 @@
+@use '../../../sass/styles' as *;
+
+.card {
+  @extend %flex;
+  @include flex();
+  @extend %flex-direction-column;
+  @extend %align-items-start;
+  @extend %CardDef;
+  margin-bottom: 15px;
+
+  .list {
+    @extend %flex;
+    @extend %flex-direction-column;
+    @extend %justify-content-start;
+    @extend %align-items-start;
+
+    .item {
+      @extend %flex;
+      @extend %flex-direction-row;
+      @extend %justify-content-start;
+      @extend %align-items-center;
+      margin: 0;
+      .text {
+        @extend %p-text-3;
+        @extend %no-copy-text;
+        margin: 0;
+      }
+    }
+    .icon {
+      color: $link-1;
+      margin-left: 5px;
+      @include transitions($hover_line);
+      &:hover {
+        @include transitions($hover_line);
+        color: $link-3;
+      }
+    }
+  }
+}

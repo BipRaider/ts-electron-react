@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "CommonJS",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "esnext",
+      "es7",
+      "es6",
+      "es2021"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@assets/*": [
+        "./assets/*",
+        "./src/renderer/assets/*"
+      ],
+      "@core/*": [
+        "./src/core/*"
+      ],
+      "@preload/*": [
+        "./src/preload/*"
+      ],
+      "@renderer/*": [
+        "./src/renderer/src/*"
+      ],
+      "@components/*": [
+        "./src/renderer/src/components/*"
+      ],
+      "@redux/*": [
+        "./src/renderer/src/redux/*"
+      ],
+      "@types/*": [
+        "./src/renderer/src/types/*"
+      ],
+    },
+  },
+  "files": [
+    "./src/types/global.d.ts"
+  ],
+  "include": [
+    "src",
+    "scripts",
+    "tools",
+    "assets/notarize.js"
+  ]
+}

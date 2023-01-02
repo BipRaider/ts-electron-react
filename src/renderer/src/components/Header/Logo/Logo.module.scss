@@ -1,0 +1,25 @@
+@use '../../../sass/styles' as *;
+
+.logo {
+  @extend %flex;
+  @extend %flex-nowrap;
+  @extend %flex-direction-row;
+  @extend %justify-content-center;
+  @extend %align-items-center;
+  margin: 1rem auto;
+  
+}
+.title {
+  @include UkrainianFlag();
+  @include transitions();
+  @extend %no-copy-text;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  font-weight: 900;
+  font-family: $link-font-family;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1;
+}

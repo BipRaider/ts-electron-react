@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.(test|spec).(ts|tsx)"
+  ],
+  "include": [
+    "src/renderer/vite.config.ts",
+    "src/electron/vite.config.ts",
+    "src/core/vite.config.ts",
+    "src/preload/vite.config.ts",
+  ]
+}

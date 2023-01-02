@@ -1,0 +1,59 @@
+@use '../font' as *;
+@use '../color' as *;
+@use '../mixin' as *;
+@use '../base' as *;
+
+//@extend %drop-animate;
+%drop-animate {
+  &::before,
+  &::after {
+    content: '';
+    width: 70vmax;
+    height: 70vmax;
+    position: absolute;
+    @extend %flag-bag;
+    left: -15vmin;
+    top: -15vmin;
+    -webkit-animation: drop-animate 15s linear infinite alternate, spin 20s linear infinite;
+    animation: drop-animate 15s linear infinite alternate, spin 20s linear infinite;
+    z-index: 1;
+    will-change: border-radius, transform;
+    -webkit-transform-origin: 55% 55%;
+    -ms-transform-origin: 55% 55%;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+  }
+
+  &::after {
+    width: 70vmin;
+    height: 60vmin;
+    left: auto;
+    right: -25vmin;
+    top: auto;
+    bottom: 0;
+
+    -webkit-animation: drop-animate 10s linear infinite alternate, spin 26s linear infinite;
+    animation: drop-animate 10s linear infinite alternate, spin 26s linear infinite reverse;
+    -webkit-transform-origin: 22% 22%;
+    -ms-transform-origin: 22% 22%;
+    transform-origin: 20% 22%;
+  }
+}
+
+@keyframes drop-animate {
+  0% {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+  }
+  50% {
+    border-radius: 36% 36% 10% 44% / 18% 62% 19% 48%;
+  }
+  100% {
+    border-radius: 78% 22% 23% 77% / 55% 57% 43% 45%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

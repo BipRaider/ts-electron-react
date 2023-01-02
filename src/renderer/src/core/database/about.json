@@ -1,0 +1,56 @@
+{
+  "data": {
+    "id": "1",
+    "status": "work",
+    "name": "your name",
+    "position": "developer",
+    "duration": "2020",
+    "description": "hello world",
+    "link": [
+      {
+        "id": "1",
+        "name": "Telegram",
+        "description": "You can write to me at any time.",
+        "link": "https://web.telegram.org/k/#@"
+      },
+      {
+        "id": "2",
+        "name": "Linkedin",
+        "description": "You can write to me at any time.",
+        "link": "https://www.linkedin.com/in/"
+      },
+      {
+        "id": "3",
+        "name": "GitHab",
+        "description": "There are not many projects out there.",
+        "link": "https://github.com/"
+      }
+    ],
+    "certificates": [],
+    "private": {
+      "firstname": "firstname",
+      "lastname": "lastname",
+      "photo": "https://",
+      "phone": "+380",
+      "email": "your@gmail.com",
+      "address": "Ukraine, Kharkov"
+    },
+    "languages": [
+      {
+        "id": "1",
+        "name": "English",
+        "level": "native"
+      },
+      {
+        "id": "2",
+        "name": "Ukrainian",
+        "level": "native"
+      },
+      {
+        "id": "3",
+        "name": "Russian",
+        "level": "native"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "en": {
+    "title": "Welcome!",
+    "name": "I'm hello world",
+    "about": "This is my website where you can find almost all information about me.",
+    "hello": "I'm glad to see you!",
+    "alert": "Some information is confidential!",
+    "allow": "You can only get it if you register."
+  }
+}

@@ -1,0 +1,6 @@
+@use '../../../sass/styles' as *;
+
+.image {
+  margin: 0 auto;
+  @include border-radius(50%, 50%, 50%, 50%);
+}

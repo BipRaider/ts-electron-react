@@ -1,0 +1,184 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "commonjs": true,
+    "jest": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:prettier/recommended"
+    // "airbnb"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "@typescript-eslint/eslint-plugin",
+    "import"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "settings": {
+    "import/core-modules": [
+      "electron",
+      "redux",
+      "react",
+      "node",
+      "typescript",
+      "@reduxjs/toolkit",
+      "antd"
+    ],
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx",
+      ".json"
+    ],
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "src/renderer/tsconfig.json",
+          "src/electron/tsconfig.json",
+          "src/preload/tsconfig.json",
+          "src/core/tsconfig.json"
+        ]
+      },
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".json"
+        ]
+      }
+    }
+  },
+  "rules": {
+    //base eslint
+    "no-useless-escape": "off",
+    "import/prefer-default-export": "off",
+    "no-shadow": "off",
+    "no-useless-catch": "off",
+    "import/no-anonymous-default-export": 0,
+    "no-console": 1,
+    "prefer-const": [
+      1,
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": true
+      }
+    ],
+    //ts
+    "@typescript-eslint/prefer-for-of": 2,
+    "@typescript-eslint/prefer-as-const": 2,
+    "@typescript-eslint/await-thenable": 1,
+    "@typescript-eslint/no-unsafe-call": 1,
+    "@typescript-eslint/no-var-requires": 1,
+    "@typescript-eslint/no-unsafe-return": 1,
+    "@typescript-eslint/no-unsafe-argument": 1,
+    "@typescript-eslint/no-non-null-assertion": 1,
+    "@typescript-eslint/prefer-optional-chain": 1,
+    "@typescript-eslint/no-unsafe-member-access": 1,
+    "@typescript-eslint/unbound-method": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-inferrable-types": 0,
+    "typescript-eslint/no-floating-promises": 0,
+    "@typescript-eslint/no-unsafe-assignment": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-floating-promises": [
+      1,
+      {
+        "ignoreVoid": true,
+        "ignoreIIFE": false
+      }
+    ],
+    "@typescript-eslint/no-empty-function": [
+      2,
+      {
+        "allow": [
+          "arrowFunctions"
+        ]
+      }
+    ],
+    "@typescript-eslint/restrict-template-expressions": [
+      1,
+      {
+        "allowNumber": true,
+        "allowBoolean": true,
+        "allowAny": true,
+        "allowNullish": true,
+        "allowRegExp": true
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      1,
+      {
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        "checksVoidReturn": false,
+        "checksConditionals": false
+      }
+    ],
+    //prettire
+    "prettier/prettier": [
+      1,
+      {
+        "trailingComma": "all",
+        "arrowParens": "avoid",
+        "printWidth": 100,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "proseWrap": "always",
+        "endOfLine": "auto",
+        "jsxSingleQuote": true,
+        "quoteProps": "as-needed",
+        "tabWidth": 2
+      },
+      {
+        "disableLanguages": [
+          "js",
+          "ts",
+          "tsx",
+          "jsx",
+          "scss",
+          "css",
+          "less",
+          "json"
+        ],
+        "usePrettierrc": true,
+        "fileInfoOptions": {
+          "withNodeModules": true
+        }
+      }
+    ]
+  }
+}

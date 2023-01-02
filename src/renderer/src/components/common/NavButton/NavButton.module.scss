@@ -1,0 +1,14 @@
+@use '../../../sass/styles' as *;
+
+.button {
+  position: relative;
+  border: none;
+  padding: 0;
+  @include transitions($hover_line);
+
+  span {
+    @extend %nav-bar-link;
+  }
+
+  @extend %nav-style;
+}

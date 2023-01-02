@@ -1,0 +1,83 @@
+appId: your.site.com
+productName: BipGo
+directories:
+  output: "release/${version}"
+  buildResources: assets
+copyright: "Copyright © 2022 ${author}"
+asar: true
+publish: null
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+asarUnpack:
+  - '**/*.{node,dll}'
+afterSign: assets/notarize.js
+files:
+    - "dist"
+    - ".env"
+# extraFiles:
+#     - ".env"
+# Windows configuration
+win:
+  artifactName: "${productName}-Windows-${version}-Setup.${ext}"
+  icon: "images/logo256.ico"
+  target:
+    - "zip"
+    - "nsis"
+
+# Mac OS configuration 
+mac: 
+  artifactName: "${productName}-Mac-${version}-Installer.${ext}"
+  icon: "assets/images/logo.icns"
+  entitlementsInherit: assets/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+
+# Linux configuration
+linux: 
+  artifactName: "${productName}-Linux-${version}.${ext}"
+  icon: "assets/images/logo256.ico"
+  category: Development
+  maintainer: "${appId}"
+  target:
+    - "AppImage"
+    - "deb"
+    - "rpm"
+    - snap
+
+# Config for OSX dmg
+dmg:
+  artifactName: "${productName}-dmg-${version}.${ext}"
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: "link"
+      path: "/Applications"
+
+# Config for the windows installer
+nsis:
+  artifactName: ${name}-nsis-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+
+deb:
+  depends:
+    # --- Default START
+    - gconf2
+    - gconf-service
+    - libnotify4
+    - libappindicator1
+    - libxtst6
+    - libnss3
+    # --- Default END
+    - libsecret-1-0 # This is needed for keytar on linux

@@ -1,0 +1,50 @@
+{
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:react-redux/recommended",
+        "../../.eslintrc.json"
+    ],
+    "overrides": [
+        {
+            "files": [
+                ".js",
+                ".ts",
+                ".tsx",
+                ".jsx"
+            ],
+            "parserOptions": {
+                "ecmaFeatures": {
+                    "jsx": true
+                }
+            },
+            "plugins": [
+                "react",
+                "react-hooks",
+                "react-redux",
+                "@typescript-eslint",
+                "@typescript-eslint/eslint-plugin"
+            ],
+            "rules": {
+                "import/named": 1,
+                "@typescript-eslint/no-unsafe-argument": 1,
+                //react
+                "react-redux/connect-prefer-named-arguments": 1,
+                "react/jsx-props-no-spreading": "off",
+                "react/react-in-jsx-scope": "off",
+                "react/jsx-filename-extension": [
+                    "warn",
+                    {
+                        "allow": "as-needed",
+                        "extensions": [
+                            ".tsx",
+                            ".jsx"
+                        ]
+                    }
+                ],
+                "react-hooks/rules-of-hooks": "warn",
+                "react-hooks/exhaustive-deps": 0,
+                "react/prop-types": "off"
+            }
+        }
+    ]
+}

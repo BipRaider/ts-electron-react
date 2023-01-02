@@ -1,0 +1,47 @@
+@use './color' as *;
+
+// @include flex()
+
+@mixin flex($grow: 1, $shrink: 1, $basic: 100%) {
+  -webkit-box-flex: $grow;
+  -ms-flex: $grow $shrink $basic;
+  flex: $grow $shrink $basic;
+}
+
+// @include border-radius(top-left, top-right, bottom-left, bottom-right);
+@mixin border-radius($top-left: 0, $top-right: 0, $bottom-left: 0, $bottom-right: 0) {
+  border-top-left-radius: $top-left;
+  border-top-right-radius: $top-right;
+
+  border-bottom-left-radius: $bottom-left;
+  border-bottom-right-radius: $bottom-right;
+  // border-radius: 0% 100% 84% 16% / 3% 58% 42% 97% ;
+}
+
+// @include transitions(tag, time);
+// @include transitions();
+@mixin transitions($time: 0.2s, $tag: all) {
+  transition: $tag $time ease-out;
+  -webkit-transition: $tag $time ease-out;
+  -moz-transition: $tag $time ease-out;
+  -ms-transition: $tag $time ease-out;
+  -o-transition: $tag $time ease-out;
+}
+
+// @include UkrainianFlag();
+@mixin UkrainianFlag() {
+  background-image: linear-gradient(to top, $flag-1 50%, $flag-2 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+// @include linkText();
+@mixin linkText($color: $dark) {
+  background-color: $color;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
